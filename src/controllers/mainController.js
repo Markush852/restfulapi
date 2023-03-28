@@ -3,26 +3,30 @@ const controlador =
 
     getHome : (req , res) =>
     {
-        res.render('home')
+        res.render('home');
     }
     ,
     getStore : (req , res) =>
     {
-        res.render('store')
+        res.render('store');
+
+        const id = req.params.id;
+
+        const {nameProduct , description , price} = req.body; 
     }
     , getRegister : (req , res) =>
     {
-        res.render('register')
+        res.render('register');
     }
     , getLogin : (req , res) =>
     {
-        res.render('login')
+        res.render('login');
     }
     , getCart : (req , res) =>
     {
-        res.render('cart')
+        res.render('cart');
     }
-
+    
 
 
 }
