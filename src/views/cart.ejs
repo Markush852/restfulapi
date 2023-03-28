@@ -9,6 +9,24 @@
 </head>
 <%- include ('./partials/header.ejs') %>
 <body>
+
+    <div class="flex flex-row">
+        <div class="flex-1 bg-gray-200 relative">
+          <div class="p-3 flex items-center justify-between">
+            <h2 class="font-bold text-lg">Carrito</h2>
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-shopping-cart"><circle cx="9" cy="21" r="1"></circle><circle cx="20" cy="21" r="1"></circle><path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"></path></svg>
+          </div>
+          <ul class="px-4 py-2">
+            <li class="text-sm mb-2 hover:bg-gray-400">Item 1</li>
+            <li class="text-sm mb-2 hover:bg-gray-400">Item 2</li>
+            <li class="text-sm mb-2 hover:bg-gray-400">Item 3</li>
+          </ul>
+          <div class="py-3 px-3 bg-gray-400 flex justify-between">
+            <span class="text-xs font-semibold">Total: $xxx</span>
+            <button class="bg-teal-500 rounded text-white py-2 px-4 md:py-2 md:px-4 ">Checkout</button>
+          </div>
+        </div>
+      </div>
     
 </body>
 <%- include ('./partials/footer.ejs') %>
