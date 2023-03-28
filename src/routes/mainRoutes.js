@@ -6,5 +6,14 @@ const mainController = require('../controllers/mainController')
 
 router.get('/' , mainController.getHome);
 
+router.get('/register' , mainController.getRegister);
+
+router.get('/store' , mainController.getStore);
+
+router.get('/login' , mainController.getLogin);
+
+router.get('/cart' , mainController.getCart);
+
+router.get('/' , mainController.getHome);
 
 module.exports = router;
