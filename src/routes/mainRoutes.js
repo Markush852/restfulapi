@@ -7,6 +7,7 @@ const mainController = require('../controllers/mainController')
 router.get('/' , mainController.getHome);
 
 router.get('/register' , mainController.getRegister);
+router.post('/register' , mainController.postRegister);
 
 router.get('/store' , mainController.getStore);
 
