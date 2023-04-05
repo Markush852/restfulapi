@@ -9,6 +9,73 @@
 </head>
 <%- include ('./partials/header.ejs') %>
 <body>
+
+
+
+    <div class ="container mx-auto" >
+
+        <h1 class="text-2xl font-bold text-left tracking-wide my-30">Mi cuenta</h1>
+        <div class="container mx-auto w-1/2  text-center py-20 px-15 shadow-2xl ">
+            <h3 class="text-center text-blue-700 font-semibold text-xl tracking-wide py-4 px-2"> Registrate a continuación: </h3>
+           
+            <form class="px-4 py-3 text-center " method ="POST">
+                <label for ="nombre" class="  block mb-2 text-sm font-bold text-gray-700">Introduce tu nombre: </label>
+                <input type = "text" id="nombre" class="w-1/2 px-2 py-1 text-sm leading-tight text-gray-700 border border-gray-400 rounded focus:outline-none focus:border-indigo-500">
+
+                <label for ="apellido" class="block my-2 text-sm font-bold text-gray-700">Introduce apellido: </label>
+                <input type = "text" id="apellido" class="w-1/2 px-2 py-1 mb-2 text-sm leading-tight text-gray-700 border border-gray-400 rounded focus:outline-none focus:border-indigo-500">
+
+                <label for ="email" class="block mb-2 text-sm font-bold text-gray-700">Introduce email: </label>
+                <input type = "email" id="email" class="w-1/2 px-2 py-1 text-sm leading-tight text-gray-700 border border-gray-400 rounded focus:outline-none focus:border-indigo-500">
+
+                <label for ="password" class="block mb-2 text-sm font-bold text-gray-700">Introduce contraseña: </label>
+                <input type = "password" id="password" class="w-1/2 px-2 py-1 text-sm leading-tight text-gray-700 border border-gray-400 rounded focus:outline-none focus:border-indigo-500">
+
+
+                </form>
+        </div>
+
+
+
+    </div>
+
+    <div class="container mx-auto" > 
+
+        <div class="container mx-auto w-1/2  text-center py-20 px-15 shadow-2xl ">
+            <h3 class="text-center text-blue-700 font-semibold text-xl tracking-wide py-4 px-2"> ¡O puedes iniciar sesión!</h3>
+                <form action="/login" method="POST">
+                    <div class="flex flex-col items-center">
+                      <label for="name" class="text-xl font-semibold mb-4">Nombre de usuario:</label>
+                      <input type="text" name="name" id="name" class="rounded shadow px-2 py-1 bg-white focus:outline-none"/>
+                      <label for="password" class="text-xl font-semibold mt-4 mb-4">Contraseña:</label>
+                      <input type="password" name="password" id="password" class="rounded shadow px-2 py-1 bg-white focus:outline-none"/>
+                      <input type="submit" value="Iniciar Sesión" class="bg-blue-500 text-white rounded shadow py-2 px-8 mt-6 font-bold hover:bg-blue-600"/>
+                    </div>
+                  </form>
+
+            
+        </div>
+
+
+
+
+    </div>
+
+    <div class = "container mx-auto">
+        <p>Algunos de nuestros productos</p>
+       
+    <p>Nombre : AK 47</p>
+    <p>Description : Description</p>
+    <p>Precio : 1300</p>
+    <p>Stock : 5</p>
+
+
+    </div>
+
+
+  
+
+
     
 </body>
 <%- include ('./partials/footer.ejs') %>
