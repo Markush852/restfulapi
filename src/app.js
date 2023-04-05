@@ -4,6 +4,10 @@ const ejs = require('ejs');
 const app = express();
 const mainRoutes = require('./routes/mainRoutes');
 
+const bodyParser = require('body-parser');
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
 app.use('/' , mainRoutes)
 app.set( 'view engine' , 'ejs');
 
