@@ -1,7 +1,9 @@
-const controlador = 
+const controller = 
 {
 
     
+
+
 
     getHome : (req , res) =>
     {
@@ -18,19 +20,33 @@ const controlador =
     }
     , getRegister : (req , res) =>
     {
-        res.render('register');
-        console.log(usuariosJSON);
+        res.render('register'  );
+        
     },
+
+
     postRegister : (req , res) =>
     {
 
+        console.log(req.body);
+
         const fs = require('fs');
 
-        const usersJSON = JSON.parse(fs.readFileSync('./data/usuarios.json'));
-  const newUser = req.body;
+        const usersJSON = [];
+  const newUser = {
+    name: req.body.name,
+    lastname: req.body.lastname,
+    email: req.body.email,
+    password: req.body.password
+
+  };
+
   usersJSON.push(newUser);
-  fs.writeFileSync('./data/usuarios.json', JSON.stringify(usersJSON));
-  res.send("Usuario guardado correctamente!");
+  const data = JSON.stringify(req.body);
+
+  fs.writeFileSync('', JSON.stringify(usersJSON));
+
+  res.send("User saved succesfully!");
 
         console.log(req.body);
       
@@ -38,6 +54,7 @@ const controlador =
 
 
     }
+
     , getLogin : (req , res) =>
     {
         res.render('login');
@@ -51,4 +68,4 @@ const controlador =
 
 }
 
-module.exports = controlador;
+module.exports = controller;
