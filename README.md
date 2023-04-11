@@ -10,3 +10,5 @@ Para las vistas : EJS
 Para el diseño css : Tailwind
 
 Para la db : Sequelize
+
+
